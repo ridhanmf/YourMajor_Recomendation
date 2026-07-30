@@ -82,11 +82,20 @@ def inject_css():
             margin-top: 10px;
             max-width: 560px;
         }
+       .hero2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        }
+        
         .hero2 img {
-            width: 80%;
-            height: 600px;
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 18px;
             object-fit: cover;
-            filter: brightness(80%);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
         }
         .section-title {
             font-size: 22px;
