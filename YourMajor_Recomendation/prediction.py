@@ -7,8 +7,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 
 # Path ke model pipeline
-PIPELINE_PATH = os.path.join(os.path.dirname(os.path.abspath(_file_)), 'your_major_recomendation_pipeline.pkl')
-ASSET_DIR = os.path.dirname(os.path.abspath(_file_))
+PIPELINE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'your_major_recomendation_pipeline.pkl')
+ASSET_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 @st.cache_resource
