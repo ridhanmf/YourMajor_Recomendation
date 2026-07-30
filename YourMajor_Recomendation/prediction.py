@@ -134,4 +134,4 @@ def run():
                 st.markdown(f'{icon} *{jurusan}* — {cnt} siswa ({pct:.1f}%)')
 
     st.markdown('---')
-    st.markdown('*© 2026 YourMajor*')
+    st.markdown('<div class="footer-note">© 2026 YourMajor — Muhammad Izzat, Ridhan Firdaus, Nicholas Calvin</div>', unsafe_allow_html=True)
