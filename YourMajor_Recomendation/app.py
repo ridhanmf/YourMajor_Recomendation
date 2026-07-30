@@ -92,7 +92,7 @@ def inject_css():
         .hero2 img {
             width: 100%;
             max-width: 900px;
-            height: auto;
+            height: 1000px;
             border-radius: 18px;
             object-fit: cover;
             box-shadow: 0 8px 25px rgba(0,0,0,0.35);
