@@ -57,7 +57,7 @@ def run():
         
         </style>                   
         <div style='display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;'>
-            <img src="https://raw.githubusercontent.com/ridhanmf/YourMajor_Recomendation/main/YourMajor_Recomendation/logo_remove.jpeg"width='90' style='flex-shrink: 0;'>
+            <img src="https://raw.githubusercontent.com/ridhanmf/YourMajor_Recomendation/main/YourMajor_Recomendation/logo_remove(1).png"width='90' style='flex-shrink: 0;'>
             <h1 style='margin: 0;'>Prediksi & Rekomendasi Jurusan</h1>
         </div>
         
