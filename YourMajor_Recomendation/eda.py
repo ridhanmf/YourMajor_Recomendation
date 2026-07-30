@@ -319,4 +319,4 @@ def run():
         "<b>Sistem Informasi</b> juga masuk 15 besar."
     )
 
-    st.markdown('<div class="footer-note">© 2026 YourMajor</div>', unsafe_allow_html=True)
+    st.markdown('<div class="footer-note">© 2026 YourMajor — Muhammad Izzat, Ridhan Firdaus, Nicholas Calvin</div>', unsafe_allow_html=True)
