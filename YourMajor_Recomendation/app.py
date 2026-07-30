@@ -32,80 +32,83 @@ st.set_page_config(
     layout="wide"
 )
 
+# =========================
+# Custom CSS
+# =========================
+st.markdown("""
+<style>
 
-def main():
-    # Logo
-    st.sidebar.image(LOGO_PATH, use_container_width=True)
-    st.sidebar.markdown("---")
+/* =========================
+   SIDEBAR
+========================= */
 
-    page = st.sidebar.selectbox(
-        "Pilih Halaman",
-        ("Home", "EDA", "Prediksi")
-    )
+/* Background sidebar */
+section[data-testid="stSidebar"]{
+    background-color: white;
+}
 
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("Rekomendasi Jurusan & Universitas")
-    st.sidebar.markdown("Berdasarkan Nilai UTBK 2019 Saintek")
-    st.sidebar.markdown("")
-    st.sidebar.markdown("""
-*Created by:*
-* Muhammad Izzat
-* Ridhan Firdaus
-* Nicholas Calvin
-""")
+/* Semua teks sidebar menjadi hitam */
+section[data-testid="stSidebar"] *{
+    color: black !important;
+}
 
-    if page == "Home":
-        show_home()
-    elif page == "EDA":
-        eda.run()
-    elif page == "Prediksi":
-        prediction.run()
+/* Garis pemisah */
+section[data-testid="stSidebar"] hr{
+    border-color: #D3D3D3;
+}
 
+/* =========================
+   SELECTBOX
+========================= */
 
-def show_home():
-    st.title("🎓 YourMajor Recommendation")
-    st.image(KAMPUS_PATH)
-    st.markdown("---")
+/* Kotak selectbox */
+div[data-baseweb="select"] > div{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #D3D3D3 !important;
+}
 
-    col1, col2 = st.columns([2, 1])
+/* Tulisan di dalam selectbox */
+div[data-baseweb="select"] span{
+    color: black !important;
+}
 
-    with col1:
-        st.markdown("""
-### Welcome!
+/* Menu dropdown */
+div[data-baseweb="popover"]{
+    background-color: white !important;
+}
 
-Aplikasi ini membantu calon mahasiswa menemukan **jurusan dan universitas**
-yang paling sesuai dengan **nilai UTBK** mereka.
+/* Tulisan pada menu dropdown */
+div[data-baseweb="popover"] *{
+    color: black !important;
+}
 
-### Workflow
+/* =========================
+   MAIN PAGE
+========================= */
 
-Aplikasi menggunakan pendekatan **K-Nearest Neighbors** berdasarkan nilai UTBK:
+/* Background tetap hitam */
+[data-testid="stAppViewContainer"]{
+    background-color:#0E1117;
+}
 
-- **Input** 8 nilai UTBK
-- **Cari** 100 siswa paling mirip dari 86.569 data UTBK 2019 Saintek
-- **Ranking** jurusan berdasarkan kemiripan
+/* Tulisan halaman utama tetap putih */
+[data-testid="stAppViewContainer"] *{
+    color:white;
+}
 
-### Pages
+/* Tabel tetap putih */
+table{
+    color:white !important;
+}
 
-1. **Home** Beranda & Informasi Project
-2. **EDA** Eksplorasi & Visualisasi Data
-3. **Prediksi** Rekomendasi Jurusan
-""")
+/* Link */
+a{
+    color:#8ab4f8 !important;
+}
 
-    with col2:
-        st.markdown("""
-### Info Dataset
-
-| Item | Detail |
-|:-----|:------:|
-| **Sumber** | UTBK 2019 Saintek |
-| **Siswa** | 86.569 |
-| **Nilai** | 8 mata uji |
-| **Jurusan** | 279 pilihan |
-| **Bidang** | 7 kategori |
-""")
-
-    st.markdown("---")
-    st.markdown("© 2026 YourMajor")
+</style>
+""", unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
