@@ -82,22 +82,21 @@ def inject_css():
             margin-top: 10px;
             max-width: 560px;
         }
-       .hero2 {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        .hero2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero2 img {
+            width: 80%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
         }
         
-        .hero2 img {
-            width: 50%;
-            max-width: 1200px;
-            height: 1000px;
-            border-radius: 18px;
-            object-fit: cover;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-            filter: brightness(50%)
-        }
         .section-title {
             font-size: 22px;
             font-weight: 700;
