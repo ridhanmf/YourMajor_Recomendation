@@ -292,10 +292,10 @@ def show_home():
         </div>
         """, unsafe_allow_html=True)
         
-        WEARE003_b64 = img_to_base64(WEARE003)
+        WE_PATH_b64 = img_to_base64(WE_PATH)
     st.markdown(f"""
     <div class="hero">
-        <img src="data:image/jpeg;base64,{WEARE003_b64}">
+        <img src="data:image/jpeg;base64,{WE_PATH_b64}">
     </div>
     """, unsafe_allow_html=True)
     
