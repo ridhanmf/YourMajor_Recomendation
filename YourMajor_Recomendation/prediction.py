@@ -21,11 +21,11 @@ def load_model():
 
 def kategori_nilai(avg):
     if avg > 800:
-        return "🔥 OUTLIER! Nilai kamu luar biasa!"
+        return "🔥 OUTLIER!!"
     elif avg > 700:
-        return "💪 Kamu OP! Masuk universitas terbaik!"
+        return "💪 Kamu OP! Nilai kamu di atas rata-rata!"
     elif avg > 550:
-        return "✅ Nilai kamu sudah berada di ranah rata-rata. Banyak pilihan jurusan!"
+        return "✅ Good job, Nilai kamu sudah berada di ranah rata-rata."
     elif avg > 400:
         return "⚠️ Nilai kamu di ambang masalah. Masih ada peluang!"
     else:
@@ -34,6 +34,29 @@ def kategori_nilai(avg):
 
 def run():
     st.markdown("""
+        <style>
+        input {
+            color: black !important;
+            -webkit-text-fill-color: black !important;
+        }
+        
+        /* Placeholder */
+        input::placeholder{
+            color:#666 !important;
+        }
+        
+        /* Number input */
+        div[data-baseweb="input"] input{
+            color:black !important;
+            -webkit-text-fill-color:black !important;
+        }
+        
+        /* Tombol + - */
+        button{
+            color:black !important;
+        }
+        
+        </style>                    
         <div style='display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;'>
             <img src="https://raw.githubusercontent.com/ridhanmf/YourMajor_Recomendation/main/YourMajor_Recomendation/logo_remove.jpeg"width='90' style='flex-shrink: 0;'>
             <h1 style='margin: 0;'>Prediksi & Rekomendasi Jurusan</h1>
@@ -67,7 +90,7 @@ def run():
 
     st.markdown('---')
 
-    if st.button('🎯 Cari Rekomendasi', type='primary', use_container_width=True):
+    if st.button(' LETS GOO!!', type='primary', use_container_width=True):
         with st.spinner('Mencari siswa dengan nilai paling mirip...'):
 
             # Rata-rata + status
@@ -106,7 +129,7 @@ def run():
             st.markdown(f'### {msg}')
 
             # Baris 1: Bidang
-            st.subheader('📌 Bidang yang Direkomendasikan')
+            st.subheader('Bidang yang Direkomendasikan')
 
             col_cat = st.columns(len(top_kategori))
             for i, (cat, pct) in enumerate(top_kategori):
