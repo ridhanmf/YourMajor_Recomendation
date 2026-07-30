@@ -83,7 +83,7 @@ def inject_css():
             max-width: 560px;
         }
         .hero2 img {
-            width: 100%;
+            width: 80%;
             height: 600px;
             object-fit: cover;
             filter: brightness(80%);
