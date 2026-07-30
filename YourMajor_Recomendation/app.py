@@ -163,14 +163,17 @@ def inject_css():
 
         section[data-testid="stSidebar"] .sidebar-credit {
             font-size: 13px;
-            color: #C9CDD3;
+            color: #000000;
             line-height: 1.7;
         }
-        section[data-testid="stSidebar"] .sidebar-credit b { color: #FAFAFA; }
+        section[data-testid="stSidebar"] .sidebar-credit b { color: #000000; }
         section[data-testid="stSidebar"] .sidebar-tag {
             font-size: 12.5px;
-            color: #9AA0AA;
+            color: #000000;
             line-height: 1.5;
+        }
+        section[data-testid="stSidebar"] label {
+            color: #000000 !important;
         }
     </style>
     """, unsafe_allow_html=True)
