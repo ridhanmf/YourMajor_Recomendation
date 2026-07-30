@@ -312,10 +312,10 @@ def run():
     st.markdown(df_to_html_table(top10, index_label='#'), unsafe_allow_html=True)
 
     insight_box(
-        "<b>PENDIDIKAN DOKTER</b> (≈6.000 siswa) menjadi jurusan paling diminati — "
-        "hampir <b>2x lipat</b> dari <b>Teknik Sipil</b> (#2, ≈3.800). Menariknya, <b>Kedokteran</b> (≈1.700) "
+        "<b>PENDIDIKAN DOKTER</b> sekitar 6.000 siswa menjadi jurusan paling diminati — "
+        "hampir <b>2x lipat</b> dari <b>Teknik Sipil</b> menjadi ke nominasi ke 2 sekitar 3.800. Menariknya, <b>Kedokteran</b> 1.700 "
         "hanya di peringkat #12, menunjukkan siswa lebih memilih <b>Pendidikan Dokter</b> yang jenjangnya "
-        "lebih pendek. Jurusan IT/komputer seperti <b>Teknik Informatika</b> (#4, ≈3.000) dan "
+        "lebih pendek. Jurusan IT/komputer seperti <b>Teknik Informatika</b> skitar 3.000 dan "
         "<b>Sistem Informasi</b> juga masuk 15 besar."
     )
 
