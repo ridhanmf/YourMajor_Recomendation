@@ -96,6 +96,7 @@ def inject_css():
             border-radius: 18px;
             object-fit: cover;
             box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+            filter: brightness(80%)
         }
         .section-title {
             font-size: 22px;
