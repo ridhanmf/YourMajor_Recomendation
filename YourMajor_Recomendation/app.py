@@ -82,7 +82,12 @@ def inject_css():
             margin-top: 10px;
             max-width: 560px;
         }
-
+        .hero2 img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            filter: brightness(80%);
+        }
         .section-title {
             font-size: 22px;
             font-weight: 700;
@@ -294,7 +299,7 @@ def show_home():
         
         WE_PATH_b64 = img_to_base64(WE_PATH)
     st.markdown(f"""
-    <div class="hero">
+    <div class="hero2">
         <img src="data:image/jpeg;base64,{WE_PATH_b64}">
     </div>
     """, unsafe_allow_html=True)
