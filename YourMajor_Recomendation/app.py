@@ -21,6 +21,7 @@ from PIL import Image
 # =========================
 LOGO_PATH = os.path.join(BASE_DIR, "logo_removebg.png")
 KAMPUS_PATH = os.path.join(BASE_DIR, "gambar_kampus.jpeg")
+WE_PATH = os.path.join(BASE_DIR, "WEARE003.jpeg")
 
 # =========================
 # Page Config
@@ -290,7 +291,14 @@ def show_home():
             </table>
         </div>
         """, unsafe_allow_html=True)
-
+        
+        WEARE003_b64 = img_to_base64(WEARE003)
+    st.markdown(f"""
+    <div class="hero">
+        <img src="data:image/jpeg;base64,{WEARE003_b64}">
+    </div>
+    """, unsafe_allow_html=True)
+    
     st.markdown('<div class="footer-note">© 2026 YourMajor — Muhammad Izzat, Ridhan Firdaus, Nicholas Calvin</div>', unsafe_allow_html=True)
 
 
