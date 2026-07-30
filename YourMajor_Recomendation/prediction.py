@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import joblib
 import os
+import prediction
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 
