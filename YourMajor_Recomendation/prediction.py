@@ -35,7 +35,7 @@ def kategori_nilai(avg):
 def run():
     st.markdown("""
         <div style='display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;'>
-            <img src='https://github.com/ridhanmf/YourMajor_Recomendation/tree/main/YourMajor_Recomendation/logo_remove.png' width='90' style='flex-shrink: 0;'>
+            <img src="https://raw.githubusercontent.com/ridhanmf/YourMajor_Recomendation/main/YourMajor_Recomendation/logo_removebg.png">
             <h1 style='margin: 0;'>Prediksi & Rekomendasi Jurusan</h1>
         </div>
     """, unsafe_allow_html=True)
