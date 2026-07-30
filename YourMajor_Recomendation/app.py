@@ -90,7 +90,7 @@ def inject_css():
         }
         
         .hero2 img {
-            width: 100%;
+            width: 50%;
             max-width: 1200px;
             height: 1000px;
             border-radius: 18px;
