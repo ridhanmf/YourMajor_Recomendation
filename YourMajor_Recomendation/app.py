@@ -2,7 +2,7 @@ import sys
 import os
 
 # Tambah path biar bisa import eda.py & prediction.py dari folder yang sama
-sys.path.insert(0, os.path.dirname(os.path.abspath(_file_)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
 import pandas as pd
@@ -14,7 +14,7 @@ import eda
 import prediction
 from PIL import Image
 
-ASSET_DIR = os.path.dirname(os.path.abspath(_file_))
+ASSET_DIR = os.path.dirname(os.path.abspath(__file__))
 
 icon = Image.open('logo_removebg.png')
 st.set_page_config(
