@@ -36,25 +36,24 @@ def run():
     st.markdown("""
         <style>
 
-        /* Text Input */
         div[data-testid="stTextInput"] input{
             color: black !important;
             -webkit-text-fill-color: black !important;
             font-weight: bold !important;
         }
         
-        /* Number Input */
         div[data-testid="stNumberInput"] input{
             color: black !important;
             -webkit-text-fill-color: black !important;
             font-weight: bold !important;
         }
         
-        /* Placeholder */
         div[data-testid="stTextInput"] input::placeholder{
             color:#666 !important;
             font-weight:600 !important;
         }
+        button{
+        color:black !important;
         
         </style>                   
         <div style='display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;'>
