@@ -35,33 +35,35 @@ def kategori_nilai(avg):
 def run():
     st.markdown("""
         <style>
-        input {
+
+        /* Text Input */
+        div[data-testid="stTextInput"] input{
             color: black !important;
             -webkit-text-fill-color: black !important;
+            font-weight: bold !important;
+        }
+        
+        /* Number Input */
+        div[data-testid="stNumberInput"] input{
+            color: black !important;
+            -webkit-text-fill-color: black !important;
+            font-weight: bold !important;
         }
         
         /* Placeholder */
-        input::placeholder{
+        div[data-testid="stTextInput"] input::placeholder{
             color:#666 !important;
+            font-weight:600 !important;
         }
         
-        /* Number input */
-        div[data-baseweb="input"] input{
-            color:black !important;
-            -webkit-text-fill-color:black !important;
-        }
-        
-        /* Tombol + - */
-        button{
-            color:black !important;
-        }
-        
-        </style>                    
+        </style>                   
         <div style='display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;'>
             <img src="https://raw.githubusercontent.com/ridhanmf/YourMajor_Recomendation/main/YourMajor_Recomendation/logo_remove.jpeg"width='90' style='flex-shrink: 0;'>
             <h1 style='margin: 0;'>Prediksi & Rekomendasi Jurusan</h1>
         </div>
+        
     """, unsafe_allow_html=True)
+    
     st.markdown('---')
 
     scaler, nn, nilai_cols, df = load_model()
