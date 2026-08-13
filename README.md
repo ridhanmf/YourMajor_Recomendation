@@ -15,7 +15,7 @@ The project covers the complete machine learning workflow:
 - Feature Engineering
 - Model Training
 - Model Evaluation
-- Prediction
+- Prediction and recommendation
 
 ## Machine Learning
 
@@ -67,7 +67,7 @@ Model Evaluation
    ↓
 Streamlit
    ↓
-Major Category Prediction
+Major Category Prediction and Recommendation
 ```
 ## Created by
 
