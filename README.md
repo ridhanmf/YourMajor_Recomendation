@@ -72,6 +72,8 @@ Major Category Prediction
 ## Created by
 
 Muhammad Ridhan Firdaus
+
 Muhammad Izzat
+
 Nicholas Calvin
 
