@@ -1,6 +1,6 @@
 # YourMajor 🎓
 
-YourMajor is a Machine Learning project designed to predict a student's major category based on relevant student data.
+YourMajor is a Machine Learning project designed to recommend suitable major categories for students based on their academic performance and relevant student data.
 
 The project aims to explore how machine learning can be used to help identify potential academic major categories and provide data-driven insights with KNN algorithm machine learning.
 
