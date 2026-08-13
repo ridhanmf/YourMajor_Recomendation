@@ -2,20 +2,22 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import joblib
 import os
 
 sns.set_style('whitegrid')
 
 # Path ke model pipeline
 PIPELINE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'your_major_recomendation_pipeline.pkl')
-ASSET_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+DATA_PATH = os.path.join(
+    BASE_DIR,
+    "data_nilai_peserta.csv"
+)
 
-@st.cache_resource
-def load_model():
-    df = joblib.load(PIPELINE_PATH)['dataset_lengkap']
-    return df
+@st.cache_data
+def load_data():
+    return pd.read_csv(DATA_PATH)
 
 
 def inject_css():
@@ -156,7 +158,7 @@ def run():
     """, unsafe_allow_html=True)
     st.markdown('---')
 
-    df = load_model()
+    df = load_data()
     total = len(df)
     nilai_cols = ['nilai_biologi', 'nilai_fisika', 'nilai_kimia', 'nilai_matematika',
                   'nilai_kmb', 'nilai_kpu', 'nilai_kua', 'nilai_ppu']
@@ -167,7 +169,7 @@ def run():
 
     col_img, _ = st.columns([3, 1])
     with col_img:
-        st.image(os.path.join(ASSET_DIR, 'kategori_jurusan.jpeg'),
+        st.image(os.path.join(BASE_DIR, 'kategori_jurusan.jpeg'),
                  caption='Kategori Jurusan — Distribusi siswa per bidang (Saintek)',
                  use_container_width=True)
 
@@ -207,7 +209,7 @@ def run():
 
     col_img, _ = st.columns([3, 1])
     with col_img:
-        st.image(os.path.join(ASSET_DIR, 'avg_nilai_nilai.jpeg'),
+        st.image(os.path.join(BASE_DIR, 'avg_nilai_nilai.jpeg'),
                  caption='AVG Nilai-Nilai — Rata-rata 8 mata uji seluruh siswa',
                  use_container_width=True)
 
@@ -248,7 +250,7 @@ def run():
 
     col_img, _ = st.columns([3, 1])
     with col_img:
-        st.image(os.path.join(ASSET_DIR, 'box_plot.jpeg'),
+        st.image(os.path.join(BASE_DIR, 'box_plot.jpeg'),
                  caption='Box Plot Outlier Numeric — Sebaran nilai per mata uji',
                  use_container_width=True)
 
@@ -275,7 +277,7 @@ def run():
 
     col_img, _ = st.columns([3, 1])
     with col_img:
-        st.image(os.path.join(ASSET_DIR, 'heatmap_kategori.jpeg'),
+        st.image(os.path.join(BASE_DIR, 'heatmap_kategori.jpeg'),
                  caption='AVG Nilai Pada Kategori Jurusan — Rata-rata nilai per bidang',
                  use_container_width=True)
 
@@ -302,7 +304,7 @@ def run():
 
     col_img, _ = st.columns([3, 1])
     with col_img:
-        st.image(os.path.join(ASSET_DIR, 'minat_terbanyak.jpeg'),
+        st.image(os.path.join(BASE_DIR, 'minat_terbanyak.jpeg'),
                  caption='Jurusan Dengan Minat Terbanyak — Top 40 jurusan paling diminati',
                  use_container_width=True)
 
